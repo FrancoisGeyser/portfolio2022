@@ -1,0 +1,43 @@
+.mainHeroContainer {
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  background: #ddd;
+}
+
+.mainHeroInnerContainer {
+  padding: 1rem 0 0 0;
+}
+
+.mainHeroInnerBlockGray {
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  background: #000;
+  z-index: 2;
+}
+
+.mainHeroInnerBlockWhite {
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  left: 0;
+  background: #fff;
+  z-index: 2;
+}
+
+.mainHeroLogoContainer {
+  color: #fff;
+  mix-blend-mode: difference;
+  font-family: 'AGarProR';
+  font-size: 3rem;
+  z-index: 3;
+  span {
+    font-family: 'EuropaR';
+  }
+
+  @media (min-width: 1208px) {
+    font-size: 7rem;
+  }
+}

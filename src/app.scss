@@ -1,0 +1,27 @@
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'EuropaR', Helvetica, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.25px;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

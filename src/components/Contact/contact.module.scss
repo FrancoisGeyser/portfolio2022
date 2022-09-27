@@ -1,0 +1,53 @@
+.mainContactContainer {
+  height: 100vh;
+  width: 100%;
+  background: #ddd;
+  color: #000;
+  z-index: 2;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+
+.mainContactInnerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @media (min-width: 1208px) {
+    margin-right: 200px;
+  }
+}
+
+.mainContactLink {
+  font-family: 'AGarProR';
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  span {
+    font-family: 'EuropaR';
+    font-size: 0.7rem;
+    padding-left: 1rem;
+    color: red;
+  }
+
+  a {
+    width: fit-content;
+    position: relative;
+  }
+
+  a:after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    height: 0.5px;
+    width: 0;
+    background: #000;
+    transition: width 0.3s ease-in-out;
+  }
+  a:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}
