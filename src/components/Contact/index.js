@@ -43,6 +43,7 @@ export function Contact() {
   }, [])
   return (
     <main id="contact" className={styles.mainContactContainer}>
+      <div data-scrolltag="contact" />
       <section className={styles.mainContactInnerContainer}>
         <div id="email" className={styles.mainContactLink}>
           <a href="mailto:fegeyser@gmail.com">fegeyser@gmail.com</a>

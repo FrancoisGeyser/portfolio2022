@@ -2,21 +2,25 @@
   position: fixed;
   top: 0;
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   filter: invert(1);
   z-index: 100;
-  mix-blend-mode: difference;
+  padding: 0.5rem 1rem;
+  background: #fff;
 
   @media (min-width: 1208px) {
+    position: fixed;
     padding: 3rem 0;
     left: unset;
     right: 0;
     width: 200px;
     height: 100vh;
     flex-direction: column;
+    background: unset;
+    mix-blend-mode: difference;
   }
 }
 
@@ -66,6 +70,9 @@
   & > * {
     height: 2px;
   }
+  @media screen and (max-width: 1207px) {
+    align-self: flex-end;
+  }
 }
 
 .mainNavMenuContainer {
@@ -79,7 +86,7 @@
   margin-top: 0;
   opacity: 0;
   height: 0;
-  transition: all 0.25s ease-out;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,10 +117,13 @@
 .mainNavMenuOpen {
   margin-top: 10px;
   opacity: 1;
-  height: fit-content;
+  height: calc(100vh - 75px);
 
   & {
     transition: all 0.65s 0.35s ease-out;
+  }
+  @media screen and (min-width: 1208px) {
+    height: fit-content;
   }
 }
 
@@ -122,4 +132,10 @@
   font-size: 1.5rem;
   font-weight: 400;
   cursor: pointer;
+}
+
+.mainNavLogoOpen {
+  @media screen and (max-width: 1207px) {
+    align-self: flex-end;
+  }
 }

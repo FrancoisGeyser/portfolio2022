@@ -7,30 +7,54 @@ import { usePageUpdate } from '../../hooks/usePageUpdate'
 export function Hero() {
   usePageUpdate('home')
   React.useEffect(() => {
+    const mql = window.matchMedia('(min-width: 1208px)')
     gsap.registerPlugin(ScrollTrigger)
+
     gsap.fromTo(
       '#heroLogo',
       { x: '-100vh' },
       { x: '2rem', duration: 2, delay: 0.25 }
     )
-    let logoTl = gsap.timeline({
+
+    const logoTl = gsap.timeline({
       scrollTrigger: {
         trigger: document.body,
         start: 0,
         end: () => window.innerHeight * 1.2,
-        scrub: 0.6,
+        scrub: true,
       },
     })
-    logoTl.fromTo(
-      '#heroLogo',
+    logoTl.add('start')
+    logoTl.to(
+      '#logoDev',
       {
-        position: 'absolute',
-        top: '32vh',
+        color: 'unset',
       },
-      {
-        top: '10vh',
-      }
+      'start'
     )
+    if (mql.matches) {
+      logoTl.fromTo(
+        '#heroLogo',
+        {
+          top: '30%',
+        },
+        {
+          top: '90%',
+        },
+        'start'
+      )
+    } else {
+      logoTl.fromTo(
+        '#heroLogo',
+        {
+          top: '42%',
+        },
+        {
+          top: '90%',
+        },
+        'start'
+      )
+    }
 
     const tl = gsap.timeline()
     tl.fromTo('#blockGray', { y: '100%' }, { y: '-50%', duration: 2 }, 0)
@@ -40,6 +64,7 @@ export function Hero() {
   }, [])
   return (
     <main id="home" className={styles.mainHeroContainer}>
+      <div data-scrolltag="home" />
       <section id="heroLogo" className={styles.mainHeroLogoContainer}>
         francoisg.<span id="logoDev">DEV</span>
       </section>

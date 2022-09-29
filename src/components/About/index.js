@@ -10,8 +10,8 @@ export function About() {
       scrollTrigger: {
         trigger: document.body,
         start: () => window.innerHeight * 0.2,
-        end: () => window.innerHeight * 1.1,
-        scrub: 0.25,
+        end: () => window.innerHeight * 0.8,
+        scrub: true,
       },
     })
     logoTl.add('start')
@@ -40,6 +40,7 @@ export function About() {
   }, [])
   return (
     <main id="about" className={styles.mainAboutContainer}>
+      <div data-scrolltag="about" />
       <section className={styles.mainAboutInnerContainer}>
         <div id="aboutText" className={styles.mainAboutTextContainer}>
           <span>Hey!</span> I am Francois.

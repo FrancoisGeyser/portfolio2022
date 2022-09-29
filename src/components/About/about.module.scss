@@ -1,6 +1,6 @@
 .mainAboutContainer {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background: #000;
   color: #fff;
   z-index: 2;
@@ -31,6 +31,7 @@
   mask-repeat: no-repeat;
   background: #fff;
   @media (min-width: 1208px) {
+    margin-top: -300px;
     width: 400px;
     height: 400px;
   }

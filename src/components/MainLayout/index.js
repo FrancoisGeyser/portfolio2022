@@ -6,12 +6,14 @@ import styles from './layout.module.scss'
 
 export function MainLayoutContainer() {
   return (
-    <main className={styles.mainLayoutContainer}>
+    <>
       <NavbarContainer />
-      <section>
-        <Outlet />
-      </section>
-      <Footer />
-    </main>
+      <main className={styles.mainLayoutContainer}>
+        <section>
+          <Outlet />
+        </section>
+        <Footer />
+      </main>
+    </>
   )
 }

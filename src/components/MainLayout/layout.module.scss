@@ -1,6 +1,10 @@
 .mainLayoutContainer {
-  width: 100%;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
   height: 100%;
   z-index: 0;
   background: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }

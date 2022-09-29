@@ -3,6 +3,7 @@
   width: 100vw;
   z-index: 1;
   background: #ddd;
+  position: relative;
 }
 
 .mainHeroInnerContainer {
@@ -29,12 +30,14 @@
 
 .mainHeroLogoContainer {
   color: #fff;
+  position: absolute;
   mix-blend-mode: difference;
   font-family: 'AGarProR';
   font-size: 3rem;
   z-index: 3;
   span {
     font-family: 'EuropaR';
+    transition: color 0.25s ease;
   }
 
   @media (min-width: 1208px) {

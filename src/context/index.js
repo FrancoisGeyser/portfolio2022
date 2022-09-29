@@ -1,4 +1,5 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useState } from 'react'
+import { projData } from './projData'
 
 export const Context = createContext()
 
@@ -7,9 +8,10 @@ export const ContextProvider = (props) => {
 
   const scrollToID = (id) => {
     setID(id)
-    let elmnt = document.getElementById(id)
-    elmnt.scrollIntoView(true)
-    scrollBy(0, 5)
+    let elmnt = document.querySelector(`[data-scrolltag=${id}]`)
+    elmnt.scrollIntoView({
+      behavior: 'smooth',
+    })
   }
 
   return (
@@ -18,6 +20,7 @@ export const ContextProvider = (props) => {
         ID,
         setID,
         scrollToID,
+        projData,
       }}
     >
       {props.children}

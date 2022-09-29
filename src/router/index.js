@@ -4,7 +4,7 @@ import { Error } from '../components/Error'
 import { MainLayoutContainer } from '../components/MainLayout'
 import { BlogLayoutContainer } from '../components/BlogLayout'
 import { MainContainer } from '../containers/Main'
-import { Contact } from '../components/Contact'
+import { ProjectContainer } from '../containers/Project'
 
 export const router = createBrowserRouter([
   {
@@ -20,8 +20,8 @@ export const router = createBrowserRouter([
             element: <MainContainer />,
           },
           {
-            path: 'contact',
-            element: <Contact />,
+            path: 'projects/:ID',
+            element: <ProjectContainer />,
           },
         ],
       },

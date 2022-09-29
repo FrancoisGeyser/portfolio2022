@@ -12,7 +12,9 @@ export const usePageUpdate = (pageID) => {
       trigger: `#${pageID}`,
       start: 'top center',
       end: 'bottom center',
-      onToggle: () => setID(pageID),
+      onToggle: () => {
+        setID(pageID)
+      },
     })
   }, [])
 }

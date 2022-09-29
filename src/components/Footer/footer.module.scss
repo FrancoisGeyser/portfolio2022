@@ -4,6 +4,45 @@
   color: #fff;
 }
 
+.mainFooterNavContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1208px) {
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 200px;
+  }
+}
+
+.mainFooterLogoContainer {
+  color: #fff;
+  font-family: 'AGarProR';
+  font-size: 3rem;
+  z-index: 3;
+  span {
+    font-family: 'EuropaR';
+    color: red;
+  }
+
+  @media (min-width: 1208px) {
+    font-size: 7rem;
+  }
+}
+
+.mainFooterMenuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+
+  @media (min-width: 1208px) {
+    display: none;
+  }
+}
+
 .mainFooterContent {
   text-align: center;
   padding: 2rem;
