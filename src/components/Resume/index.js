@@ -17,7 +17,7 @@ export function Resume() {
           type="application/pdf"
           data="/CV_Francois_Geyser.pdf#toolbar=0&view=FitV"
         >
-          PDF is not available on mobile, you can download it here{' '}
+          PDF is not available on mobile, you can download it here:{' '}
           <a href="/CV_Francois_Geyser.pdf" target="__blank">
             Download
           </a>

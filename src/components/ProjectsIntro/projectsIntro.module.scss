@@ -11,6 +11,7 @@
   width: 100vw;
   height: 100%;
   overflow-y: scroll;
+  margin: 0 auto;
 
   @media screen and (min-width: 1208px) {
     width: calc(100vw - 200px);
@@ -62,9 +63,9 @@
   }
 
   @media screen and (min-width: 1208px) {
-    width: 620px;
-    height: 420px;
+    width: 85%;
     padding: 1rem;
+    padding-top: 52%;
   }
 }
 
@@ -72,6 +73,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   cursor: pointer;
   z-index: 3;
 }

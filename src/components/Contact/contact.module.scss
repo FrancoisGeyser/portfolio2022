@@ -12,10 +12,17 @@
 .mainContactInnerContainer {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.25rem;
+  padding: 1rem;
   @media (min-width: 1208px) {
+    gap: 2rem;
     margin-right: 200px;
+    padding: 0;
   }
+}
+
+.mainContactHeading {
+  font-size: 2rem;
 }
 
 .mainContactLink {

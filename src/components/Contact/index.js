@@ -9,10 +9,10 @@ export function Contact() {
   React.useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: document.body,
-        start: () => window.innerHeight * 1.42,
-        end: () => '+=400px',
-        scrub: 0.25,
+        trigger: '#contact',
+        start: 'top bottom',
+        end: 'center center',
+        scrub: true,
       },
     })
     tl.add('start')
@@ -45,6 +45,9 @@ export function Contact() {
     <main id="contact" className={styles.mainContactContainer}>
       <div data-scrolltag="contact" />
       <section className={styles.mainContactInnerContainer}>
+        <div className={styles.mainContactHeading}>
+          Feel free to contact me for further information.
+        </div>
         <div id="email" className={styles.mainContactLink}>
           <a href="mailto:fegeyser@gmail.com">fegeyser@gmail.com</a>
           <span

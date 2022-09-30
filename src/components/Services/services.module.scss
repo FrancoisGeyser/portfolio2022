@@ -1,5 +1,5 @@
 .mainServicesContainer {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: #fff;
   color: #000;
@@ -15,6 +15,7 @@
   @media (min-width: 1208px) {
     padding: 2rem;
     margin-right: 200px;
+    margin-left: 150px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -23,6 +24,7 @@
 .servicesLeftContainer {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 
   @media (min-width: 1208px) {
     flex-direction: column;
@@ -36,7 +38,6 @@
 }
 
 .mainServicesLabel {
-  font-family: 'AGarProR';
   font-size: 1.5rem;
   cursor: pointer;
   width: fit-content;
@@ -57,4 +58,27 @@
       width: 100%;
     }
   }
+}
+
+.labelActive {
+  &:after {
+    width: 100%;
+  }
+}
+
+.mainServicesDescription {
+  font-family: 'AGarProR';
+  font-size: 1.25rem;
+  padding-left: 1rem;
+  overflow: hidden;
+  height: 0;
+  transition: all 0.5s linear;
+}
+
+.serviceShow {
+  height: fit-content;
+  margin: 7px 0;
+}
+
+.mainServicesItem {
 }
