@@ -12,17 +12,18 @@
   @media (min-width: 1208px) {
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-right: 200px;
   }
 }
 
 .mainFooterLogoContainer {
   color: #fff;
-  font-family: 'AGarProR';
+  font-family: "AGarProR";
   font-size: 3rem;
   z-index: 3;
   span {
-    font-family: 'EuropaR';
+    font-family: "EuropaR";
     color: red;
   }
 
@@ -52,7 +53,7 @@
   font-size: 1.2rem;
   gap: 0.35rem;
   span:not(:first-child) {
-    font-family: 'AGarProR';
+    font-family: "AGarProR";
     font-size: 0.8rem;
   }
   @media (min-width: 1208px) {

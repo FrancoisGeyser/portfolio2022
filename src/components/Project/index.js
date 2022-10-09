@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
-import { usePageUpdate } from '../../hooks/usePageUpdate'
-import styles from './project.module.scss'
+import React, { useEffect } from "react"
+import { usePageUpdate } from "../../hooks/usePageUpdate"
+import styles from "./project.module.scss"
 
 export function Project({ projData }) {
-  usePageUpdate('Showcase')
+  usePageUpdate("Showcase")
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  }, [projData])
   return (
-    <main id="projectFull" className={styles.projectContainer}>
+    <main id="Showcase" className={styles.projectContainer}>
       <section className={styles.projectInnerContainer}>
         <div className={styles.projectShowcase}>
           <div className={styles.projectInnerContainerOverlayLeft} />

@@ -5,6 +5,8 @@
   color: #000;
   z-index: 2;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .mainServicesInnerContainer {
@@ -32,19 +34,24 @@
   }
 }
 
+.servicesLeftContainer .mainServicesLabel {
+  font-size: 1.8rem;
+}
+
 .servicesRightContainer {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }
 
 .mainServicesLabel {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   cursor: pointer;
   width: fit-content;
   position: relative;
 
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 4px;
     left: 0;
@@ -56,6 +63,7 @@
   &:hover {
     &:after {
       width: 100%;
+      background: red;
     }
   }
 }
@@ -67,7 +75,7 @@
 }
 
 .mainServicesDescription {
-  font-family: 'AGarProR';
+  font-family: "AGarProR";
   font-size: 1.25rem;
   padding-left: 1rem;
   overflow: hidden;
@@ -78,7 +86,4 @@
 .serviceShow {
   height: fit-content;
   margin: 7px 0;
-}
-
-.mainServicesItem {
 }

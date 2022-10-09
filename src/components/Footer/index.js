@@ -1,12 +1,20 @@
-import React from 'react'
-import styles from './footer.module.scss'
-import { Context } from '../../context'
+import React from "react"
+import styles from "./footer.module.scss"
+import { useLocation, useNavigate } from "react-router-dom"
+import { Context } from "../../context"
 
 export function Footer() {
-  const { ID, scrollToID } = React.useContext(Context)
+  const { scrollToID } = React.useContext(Context)
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const handleClick = (value) => {
-    scrollToID(value)
+    if (location.pathname != "/") {
+      navigate("/")
+      setTimeout(() => scrollToID(value), 200)
+    } else {
+      scrollToID(value)
+    }
   }
 
   return (
@@ -16,12 +24,12 @@ export function Footer() {
           francoisg.<span>DEV</span>
         </div>
         <div className={styles.mainFooterMenuContainer}>
-          <span onClick={() => handleClick('home')}>Home</span>
-          <span onClick={() => handleClick('about')}>About</span>
-          <span onClick={() => handleClick('services')}>Services</span>
-          <span onClick={() => handleClick('projects')}>Projects</span>
-          <span onClick={() => handleClick('contact')}>Contact</span>
-          <span onClick={() => handleClick('resume')}>Resume</span>
+          <span onClick={() => handleClick("home")}>Home</span>
+          <span onClick={() => handleClick("about")}>About</span>
+          <span onClick={() => handleClick("services")}>Services</span>
+          <span onClick={() => handleClick("projects")}>Projects</span>
+          <span onClick={() => handleClick("contact")}>Contact</span>
+          <span onClick={() => handleClick("resume")}>Resume</span>
         </div>
       </section>
       <section className={styles.mainFooterContent}>
